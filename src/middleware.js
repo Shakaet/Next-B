@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 export function middleware(request) {
 
     let cookie = request.cookies.get('next-js-token')
-    console.log(cookie.value)
+    console.log(cookie?.value)
 
    let dummyUserData={
 
@@ -15,7 +15,7 @@ export function middleware(request) {
 
     let isServices= (request.nextUrl.pathname.startsWith('/services'))
 
-    if(isServices && isAdmin){
+    if(isServices && !isAdmin){
 
            return NextResponse.redirect(new URL('/login', request.url))
 

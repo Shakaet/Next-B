@@ -24,10 +24,10 @@ export const NavBar = () => {
         <ul
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Home</a></li>
-          <li><a>Services</a></li>
-          
-          <li><a>About</a></li>
+          <Link href={"/"}>Home</Link>
+        <Link href={"/services"}>Services</Link>
+        <Link href={"/about"}>About</Link>
+        <Link href={"/post"}>Post</Link>
         </ul>
       </div>
       <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -37,6 +37,7 @@ export const NavBar = () => {
         <Link href={"/"}>Home</Link>
         <Link href={"/services"}>Services</Link>
         <Link href={"/about"}>About</Link>
+        <Link href={"/post"}>Post</Link>
       </ul>
     </div>
     <div className="navbar-end">
