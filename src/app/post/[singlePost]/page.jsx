@@ -8,6 +8,27 @@ let fetchData=async()=>{
 }
 
 
+
+export async function generateMetadata({ params }) {
+  // read route params
+  const { singlePost } = await params
+ 
+  let posts= await fetchData()
+
+  let singleData=posts.find((post)=>post.id== singlePost)
+ 
+  
+ 
+  return {
+    title: singleData.title,
+    description:singleData.body
+    
+  }
+}
+ 
+
+
+
 const SinglePost = async({params}) => {
 
 
